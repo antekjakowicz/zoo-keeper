@@ -1,4 +1,4 @@
-import AnimalsService from '../services/AnimalsService.js';
+import AnimalService from '../services/AnimalService.js';
 
 const AnimalsController = {
     async getAllAnimals(req, res) {
