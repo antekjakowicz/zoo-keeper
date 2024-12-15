@@ -3,7 +3,7 @@ import AnimalService from '../services/AnimalService.js';
 const AnimalsController = {
     async getAllAnimals(req, res) {
         try {
-            const animals = await AnimalsService.getAnimals();
+            const animals = await AnimalService.getAnimals();
             res.json(animals);
         } catch (error) {
             res.status(500).json({ message: error.message });
@@ -12,7 +12,7 @@ const AnimalsController = {
 
     async getAnimalById(req, res) {
         try {
-            const animal = await AnimalsService.getAnimalById(req.params.id);
+            const animal = await AnimalService.getAnimalById(req.params.id);
             res.json(animal);
         } catch (error) {
             res.status(404).json({ message: error.message });
@@ -21,7 +21,7 @@ const AnimalsController = {
 
     async getEndangeredAnimals(req, res) {
         try {
-            const animals = await AnimalsService.getEndangeredAnimals();
+            const animals = await AnimalService.getEndangeredAnimals();
             res.json(animals);
         } catch (error) {
             res.status(500).json({ message: error.message });
@@ -30,7 +30,7 @@ const AnimalsController = {
 
     async getAnimalsByHabitat(req, res) {
         try {
-            const animals = await AnimalsService.getAnimalsByHabitat(req.params.habitat);
+            const animals = await AnimalService.getAnimalsByHabitat(req.params.habitat);
             res.json(animals);
         } catch (error) {
             res.status(500).json({ message: error.message });
@@ -39,7 +39,7 @@ const AnimalsController = {
 
     async getAnimalsBySpecies(req, res) {
         try {
-            const animals = await AnimalsService.getAnimalsBySpecies(req.params.species);
+            const animals = await AnimalService.getAnimalsBySpecies(req.params.species);
             res.json(animals);
         } catch (error) {
             res.status(500).json({ message: error.message });
@@ -48,7 +48,7 @@ const AnimalsController = {
 
     async addAnimal(req, res) {
         try {
-            const newAnimal = await AnimalsService.addAnimal(req.body);
+            const newAnimal = await AnimalService.addAnimal(req.body);
             res.status(201).json(newAnimal);
         } catch (error) {
             res.status(404).json({ message: error.message });
@@ -57,7 +57,7 @@ const AnimalsController = {
 
     async updateAnimal(req, res) {
         try {
-            const updatedAnimal = await AnimalsService.updateAniaml(req.params.id, req.body);
+            const updatedAnimal = await AnimalService.updateAniaml(req.params.id, req.body);
             res.json(updatedAnimal);
         } catch (error) {
             res.status(404).json({ message: error.message });
@@ -66,7 +66,7 @@ const AnimalsController = {
 
     async deleteAnimal(req, res) {
         try {
-            const deletedAnimal = await AnimalsService.deleteAnimal(req.params.id);
+            const deletedAnimal = await AnimalService.deleteAnimal(req.params.id);
             res.json(deletedAnimal);
         } catch (error) {
             res.status(404).json({ message: error.message });
