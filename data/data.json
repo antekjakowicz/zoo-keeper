@@ -1,0 +1,6 @@
+[
+  { "id": 1, "name": "Simba", "species": "Lion", "age": 5, "isEndangered": true, "habitat": "Savanna" },
+  { "id": 2, "name": "Dory", "species": "Fish", "age": 2, "isEndangered": false, "habitat": "Ocean" },
+  { "id": 3, "name": "Yogi", "species": "Bear", "age": 8, "isEndangered": false, "habitat": "Jungle" },
+  { "id": 4, "name": "Elsa", "species": "Polar Bear", "age": 10, "isEndangered": true, "habitat": "Arctic" }
+]
